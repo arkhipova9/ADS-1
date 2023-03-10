@@ -41,5 +41,5 @@ uint64_t sumPrime(uint64_t hbound) {
         sum += nextPrime(num);
         num = nextPrime(num);
     }
-    return sum;  
+    return sum;
 }
