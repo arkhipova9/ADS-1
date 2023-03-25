@@ -5,7 +5,7 @@
 
 bool checkPrime(uint64_t value) {
     if (value <= 1) {
-		return false;
+	return false;
     }
     for (int num = 2; num * num <= value; num++) {
         if (value % num == 0) {
