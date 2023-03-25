@@ -27,19 +27,20 @@ uint64_t nPrime(uint64_t n) {
 uint64_t nextPrime(uint64_t value) {
   while (true) {
     value++;
-    ++value;
-    if (checkPrime(value) == true) {
+    if (checkPrime(value)) {
       return value;
     }
   }
 }
 
 uint64_t sumPrime(uint64_t hbound) {
-    uint64_t sum = 0;
-    uint64_t num = 1;
-    while (nextPrime(num) < hbound) {
-        sum += nextPrime(num);
-        num = nextPrime(num);
+    uint64_t sum1 = 0;
+    uint64_t hbound1 = 0;
+    while (hbound1 > 0) {
+        if (checkPrime(hbound1) == true) {
+            sum1 += hbound1;
+        }
+        --hbound1;
     }
-    return sum;
+    return sum1;
 }
